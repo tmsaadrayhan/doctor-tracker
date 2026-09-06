@@ -136,39 +136,60 @@ export default function DoctorsPage() {
           </button>
         </div>
         {filterOpen && (
-          <div className="filter-grid">
-            <select
-              value={filters.specialization}
-              onChange={(e) =>
-                setFilters({ ...filters, specialization: e.target.value })
-              }
+          <div>
+            <div
+              style={{ fontSize: "14px", fontWeight: "bold" }}
+              className="filter-grid"
             >
-              <option value="">All specializations</option>
-              {options.specializations.map((x) => (
-                <option key={x}>{x}</option>
-              ))}
-            </select>
-            <select
-              value={filters.hospital}
-              onChange={(e) =>
-                setFilters({ ...filters, hospital: e.target.value })
-              }
-            >
-              <option value="">All hospitals</option>
-              {options.hospitals.map((x) => (
-                <option key={x}>{x}</option>
-              ))}
-            </select>
-            <input
-              type="date"
-              value={filters.from}
-              onChange={(e) => setFilters({ ...filters, from: e.target.value })}
-            />
-            <input
-              type="date"
-              value={filters.to}
-              onChange={(e) => setFilters({ ...filters, to: e.target.value })}
-            />
+              <div>
+                <p>Select specialization</p>
+                <select
+                  value={filters.specialization}
+                  onChange={(e) =>
+                    setFilters({ ...filters, specialization: e.target.value })
+                  }
+                >
+                  <option value="">All specializations</option>
+                  {options.specializations.map((x) => (
+                    <option key={x}>{x}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <p>Select hospital</p>
+                <select
+                  value={filters.hospital}
+                  onChange={(e) =>
+                    setFilters({ ...filters, hospital: e.target.value })
+                  }
+                >
+                  <option value="">All hospitals</option>
+                  {options.hospitals.map((x) => (
+                    <option key={x}>{x}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <p>Select date from</p>
+                <input
+                  type="date"
+                  value={filters.from}
+                  onChange={(e) =>
+                    setFilters({ ...filters, from: e.target.value })
+                  }
+                />
+              </div>
+              <div>
+                <p>Select date to</p>
+                <input
+                  type="date"
+                  value={filters.to}
+                  onChange={(e) =>
+                    setFilters({ ...filters, to: e.target.value })
+                  }
+                />
+              </div>
+            </div>
             <button
               className="btn"
               onClick={() =>
