@@ -202,7 +202,7 @@ export default function DoctorsPage() {
                 })
               }
             >
-              <X size={16} /> Clear
+              <X size={16} /> Clear filters
             </button>
           </div>
         )}
