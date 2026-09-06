@@ -140,7 +140,7 @@ export default function VerifyEmailPage() {
 
         <div className="auth-footer">
           <p>
-            Didn't receive the code?{" "}
+            Didn&apos;t receive the code?{" "}
             <button
               type="button"
               onClick={resendCode}
